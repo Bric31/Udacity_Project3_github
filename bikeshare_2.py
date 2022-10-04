@@ -45,10 +45,24 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Please, enter the day : ').lower()
 
+<<<<<<< HEAD
     while day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+||||||| parent of 5174192... Update months
+    while day not in ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+=======
+    while day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
+>>>>>>> 5174192... Update months
         day = input('Select one day between monday to sunday : ').lower()
 
+<<<<<<< HEAD
         if day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+||||||| parent of 5174192... Update months
+        if day not in ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+=======
+        if day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
+>>>>>>> 5174192... Update months
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(day))
@@ -111,7 +125,8 @@ def time_stats(df):
 
     # display the most common month
 
-    months = ['january', 'february', 'march', 'april', 'may', 'june']
+    months = ['january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']
     month = [1,2,3,4,5,6]
     dict_month = dict(zip(month, months))
     common_month = dict_month[df['month'].mode()[0]].title()
