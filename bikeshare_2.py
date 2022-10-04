@@ -32,12 +32,28 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input('Please, enter the month: ').lower()
 
+<<<<<<< HEAD
     while month not in ['all','january', 'february', 'march', 'april', 'may', 'june', 'july','august',\
     'september','october','november','december']:
         month = input('Select one month between january to december : ').lower()
+||||||| parent of 5b5e4fc... Update days
+    while month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
+        month = input('Select one month between january to june : ').lower()
+=======
+    while month not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
+        month = input('Select one month between january to june : ').lower()
+>>>>>>> 5b5e4fc... Update days
 
+<<<<<<< HEAD
         if month not in ['all','january', 'february', 'march', 'april', 'may', 'june', 'july','august',\
     'september','october','november','december']:
+||||||| parent of 5b5e4fc... Update days
+        if month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
+=======
+        if month not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
+>>>>>>> 5b5e4fc... Update days
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(month))
@@ -46,6 +62,7 @@ def get_filters():
     day = input('Please, enter the day : ').lower()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     while day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
 ||||||| parent of 5174192... Update months
     while day not in ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
@@ -53,8 +70,15 @@ def get_filters():
     while day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
     'september','november','december']:
 >>>>>>> 5174192... Update months
+||||||| parent of 5b5e4fc... Update days
+    while day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
+=======
+    while day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+>>>>>>> 5b5e4fc... Update days
         day = input('Select one day between monday to sunday : ').lower()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
 ||||||| parent of 5174192... Update months
@@ -63,6 +87,12 @@ def get_filters():
         if day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
     'september','november','december']:
 >>>>>>> 5174192... Update months
+||||||| parent of 5b5e4fc... Update days
+        if day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
+=======
+        if day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+>>>>>>> 5b5e4fc... Update days
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(day))
@@ -98,7 +128,8 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        months = ['january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']
         month = months.index(month) + 1
         
     
