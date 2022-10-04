@@ -43,10 +43,10 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Please, enter the day : ').lower()
 
-    while day not in ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+    while day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
         day = input('Select one day between monday to sunday : ').lower()
 
-        if day not in ['monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
+        if day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(day))
@@ -88,11 +88,15 @@ def load_data(city, month, day):
     
         # filter by month to create the new dataframe
         df = df[df['month']==month]
+    else:
+        df
 
     # filter by day of week if applicable
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week']==day.title()]
+    else:
+        df
     
     return df
 
