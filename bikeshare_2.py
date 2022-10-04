@@ -32,10 +32,12 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input('Please, enter the month: ').lower()
 
-    while month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
+    while month not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
         month = input('Select one month between january to june : ').lower()
 
-        if month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
+        if month not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']:
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(month))
@@ -43,12 +45,10 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Please, enter the day : ').lower()
 
-    while day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
-    'september','november','december']:
+    while day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
         day = input('Select one day between monday to sunday : ').lower()
 
-        if day not in ['all','january', 'february', 'march', 'april', 'may', 'june','july','august',\
-    'september','november','december']:
+        if day not in ['all','monday','tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(day))
@@ -84,7 +84,8 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        months = ['january', 'february', 'march', 'april', 'may', 'june','july','august',\
+    'september','november','december']
         month = months.index(month) + 1
         
     
