@@ -32,10 +32,12 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input('Please, enter the month: ').lower()
 
-    while month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
-        month = input('Select one month between january to june : ').lower()
+    while month not in ['all','january', 'february', 'march', 'april', 'may', 'june', 'july','august',\
+    'september','october','november','december']:
+        month = input('Select one month between january to december : ').lower()
 
-        if month not in ['all','january', 'february', 'march', 'april', 'may', 'june']:
+        if month not in ['all','january', 'february', 'march', 'april', 'may', 'june', 'july','august',\
+    'september','october','november','december']:
             print('Please, check your answer, it doesn\'t an accepted option')
 
     print('You have chosen: {}'.format(month))
